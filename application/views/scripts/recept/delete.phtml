@@ -1,0 +1,14 @@
+<?php
+$this->title = "Удаление рецепта";
+$this->headTitle($this->title);
+?>
+<p>Вы действительно хотите удалить
+    '<?php echo $this->escape($this->recept['title']); ?>'?
+</p>
+<form action="<?php echo $this->url(array('action'=>'delete')); ?>" method="post">
+    <div>
+        <input type="hidden" name="id" value="<?php echo $this->recept['id']; ?>" />
+        <input type="submit" name="del" value="Да" />
+        <input type="submit" name="del" value="Нет" />
+    </div>
+</form>

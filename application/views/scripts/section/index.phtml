@@ -1,0 +1,16 @@
+<?php
+$this->title = "Категории";
+$this->headTitle($this->title);
+?>
+<p><a href="<?php echo $this->url(array('controller'=>'section','action'=>'add'));?>">Добавить новую категорию</a></p>
+<table>
+    <tr>
+        <th>Название</th>
+        <th>&nbsp;</th>
+    </tr>
+
+    <?php
+    echo $this->partialLoop('partials/section.phtml', $this->section);
+    ?>
+</table>
+<p><a href="<?php echo $this->url(array('controller'=>'index'));?>">Назад в меню</a></p>

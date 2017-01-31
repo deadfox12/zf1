@@ -1,0 +1,10 @@
+<tr>
+    <td>
+        <a href="<?php echo $this->url(array('controller'=>'recept', 'action'=>'view', 'id'=>$this->id));?>"><?php echo $this->escape($this->title);?></a>
+    </td>
+
+    <td>
+        <a href="<?php echo $this->url(array('controller'=>'recept', 'action'=>'edit', 'id'=>$this->id));?>">Редактировать</a>
+        <a href="<?php echo $this->url(array('controller'=>'recept', 'action'=>'delete', 'id'=>$this->id));?>">Удалить</a>
+    </td>
+</tr>

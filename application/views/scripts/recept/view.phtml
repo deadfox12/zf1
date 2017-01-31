@@ -1,0 +1,10 @@
+<?php
+$this->title = "Рецепт";
+$this->headTitle($this->title);
+?>
+<div class="content">
+        <p><h3><?php echo $this->recept['title']; ?></h3></p>
+        <p><?php echo $this->recept['text']; ?></p>
+        <p><a href="<?php echo $this->url(array('controller'=>'recept','action'=>'index'));?>">Назад к списку рецептов</a></p>
+</div>
+

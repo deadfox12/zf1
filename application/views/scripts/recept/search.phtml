@@ -1,0 +1,10 @@
+<?php
+$this->title = "Найденные рецепты";
+$this->headTitle($this->title);
+?>
+<div class="content">
+    <?php foreach ($this->recept as $item):?>
+    <p><h3><?php echo $item['title']; ?></h3></p>
+    <p><?php echo $item['text']; ?></p>
+    <?php endforeach;?>
+</div>

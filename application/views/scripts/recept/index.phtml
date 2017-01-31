@@ -1,0 +1,19 @@
+<?php
+$this->title = "Рецепты";
+$this->headTitle($this->title);
+?>
+<form action="<?php echo $this->url(array('action'=>'search')); ?>" method="post">    <input type="search" name="query" placeholder="Поиск">
+    <button type="submit">Найти</button>
+</form>
+<p><a href="<?php echo $this->url(array('controller'=>'recept','action'=>'add'));?>">Добавить новый рецепт</a></p>
+<table>
+    <tr>
+        <th>Название</th>
+        <th>&nbsp;</th>
+    </tr>
+
+    <?php
+    echo $this->partialLoop('partials/recept.phtml', $this->recept);
+    ?>
+</table>
+<p><a href="<?php echo $this->url(array('controller'=>'index'));?>">Назад в меню</a></p>
